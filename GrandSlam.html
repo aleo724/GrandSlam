@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+	<meta charset="utf-8">
+	<title>GrandSlam</title>
+	<link rel="stylesheet" href="GrandSlam.css">
+	</head>
+	<body>
+		<form>
+			Player1: <input id="player1" type="text" />
+			Player2: <input id="player2" type="text" />
+			時間: <input id="time" type="text" />秒
+			<input id="get" type="button" value="表示用意" />
+		</form>
+		<p id="key">
+			s: 先手を選ぶ，Space: 開始，→: プレー中の手番を回す，t: ストップする，r: リセット，a: (開始前に)積み上げた分を加算する，n: 次のセットへ移行する．
+		</p>
+		<hr />
+		<div id="stage"></div>
+		<div id="scoreboard">
+		</div>
+		<script type="text/template" id="tmpl-playerview">
+			<div class="name"><%= name %></div>
+			<div class="time"><%= sprintf(time) %></div>
+			<div class="time_stored"><%= sprintf(time_stored) %></div>
+		</script>
+		<script src="./js/jquery-1.10.2.min.js"></script>
+		<script src="./js/underscore.js"></script>
+		<script src="./js/backbone.js"></script>
+		<script src="./js/GrandSlam.js"></script>
+	</body>
+</html>
